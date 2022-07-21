@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
 }
@@ -8,6 +9,10 @@ body, html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 300px 900px;
+  grid-template-rows: 100px 100px 500px 100px;
 }
 
 .container div {
@@ -19,12 +24,24 @@ body, html {
   border-radius: 15px;
 }
 
+.header,
+.footer {
+  grid-column: 1 / 3;
+}
+
+.nav,
+.article {
+  grid-column: 2;
+}
+
 .header {
   background-color: #FFDE22;
 }
 
 .sidebar {
   background-color: #FF7755;
+  grid-column: 1;
+  grid-row: 2 / 4;
 }
 
 .nav {
